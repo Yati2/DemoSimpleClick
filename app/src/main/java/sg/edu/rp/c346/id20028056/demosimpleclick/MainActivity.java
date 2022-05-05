@@ -35,17 +35,19 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 // Code for the action
                 if(tbtn.isChecked()) {
+                    String stringResponse;
                     String data = etInput.getText().toString();
                     int selectedId=rgGender.getCheckedRadioButtonId();
                     if(selectedId==R.id.rbMale)
                     {
-                        tvDisplay.setText("He says "+data);
+                        stringResponse="He says "+data;
+
                     }
                     else
                     {
-                        tvDisplay.setText("She says "+data);
+                        stringResponse="She says "+data;
                     }
-
+                    tvDisplay.setText(stringResponse);
                 }
             }
         });
